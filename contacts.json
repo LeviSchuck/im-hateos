@@ -1,0 +1,24 @@
+{
+	"class": ["contacts","list"],
+	"properties": {
+		"total": 4
+	},
+	"entities": [
+		{
+			"class": ["user","contact"],
+			"href": "http://localhost:8000/users/adam.json"
+		},
+		{
+			"class": ["user","contact"],
+			"href": "http://localhost:8000/users/catherine.json"
+		},
+		{
+			"class": ["user","contact"],
+			"href": "http://localhost:8000/users/jason.json"
+		},
+		{
+			"class": ["user","contact"],
+			"href": "http://localhost:8000/users/matthew.json"
+		}
+	]
+}

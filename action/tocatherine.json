@@ -1,0 +1,24 @@
+{
+	"status": "acknowledged",
+	"immediate_events": [
+		{
+			"type": "message_sent",
+			"parameters": {
+				"at": "2014-01-03T14:01Z",
+				"content": "I don't think.. I'll be ready.",
+				"by": "http://localhost:8000/users/joe.json",
+				"to": "http://localhost:8000/users/catherine.json"
+			}
+		},
+		{
+			"_delay": 4000,
+			"type": "message_sent",
+			"parameters": {
+				"at": "2014-01-03T14:40Z",
+				"content": "Of *course* you will be!\n\nJust make sure to wash your hands!",
+				"to": "http://localhost:8000/users/joe.json",
+				"by": "http://localhost:8000/users/catherine.json"
+			}
+		}
+	]
+}

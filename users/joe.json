@@ -1,0 +1,13 @@
+{
+	"class": ["user","self"],
+	"properties": {
+		"display_name": "Joe Baggins",
+		"display_image": "http://www.gravatar.com/avatar/6a51f1fe97bdebece7652842a0e2351e?d=identicon"
+	},
+	"links": [
+		{
+			"rel": "self",
+			"href":"http://localhost:8000/users/joe.json"
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"class": ["user","contact"],
+	"properties": {
+		"display_image": "http://www.gravatar.com/avatar/beebb1e19f8d003914ed0a85e3176fcd?d=identicon",
+		"display_name": "Adam"
+	},
+	"links": [
+		{
+			"rel": "self",
+			"href": "http://localhost:8000/users/adam.json"
+		}
+	]
+}

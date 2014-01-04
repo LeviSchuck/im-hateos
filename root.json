@@ -1,3 +1,163 @@
 {
-	
+	"class": ["application"],
+	"properties": {
+		"active": true
+	},
+	"entities": [
+		{
+			"class": ["user","self"],
+			"properties": {
+				"display_name": "Joe Baggins",
+				"display_image": "http://www.gravatar.com/avatar/6a51f1fe97bdebece7652842a0e2351e?d=identicon"
+			},
+			"links": [
+				{
+					"rel": "self",
+					"href":"http://localhost:8000/users/joe.json"
+				}
+			]
+		},
+		{
+			"class": ["online","list"],
+			"properties": {
+				"total_online": 1,
+				"total_idle": 1,
+				"total_offline": 2
+			},
+			"entities": [
+				{
+					"class": ["user","contact","online"],
+					"properties": {
+						"display_image": "http://www.gravatar.com/avatar/beebb1e19f8d003914ed0a85e3176fcd?d=identicon",
+						"display_name": "Adam"
+					},
+					"links": [
+						{
+							"rel": "self",
+							"href": "http://localhost:8000/users/adam.json"
+						}
+					]
+				},
+				{
+					"class": ["user","contact","idle","opened"],
+					"properties": {
+						"display_image": "http://www.gravatar.com/avatar/7d627e7b949b2682fef4a404109916f1?d=identicon",
+						"display_name": "Jason"
+					},
+					"links": [
+						{
+							"rel": "self",
+							"href": "http://localhost:8000/users/jason.json"
+						}
+					]
+				},
+				{
+					"class": ["user","contact","opened"],
+					"properties": {
+						"display_image": "http://www.gravatar.com/avatar/9fc8427f19e596be73cc74b6bb0a5ebc?d=identicon",
+						"display_name": "Catherine Jenay Schineska"
+					},
+					"links": [
+						{
+							"rel": "self",
+							"href": "http://localhost:8000/users/catherine.json"
+						}
+					]
+				},
+				{
+					"class": ["opened","conversation"],
+					"properties": {
+						"read": true,
+						"active": false
+					},
+					"entities": [
+						{
+							"class": ["message"],
+							"properties": {
+								"content": "Are you ready for the pie eating ocntest?",
+								"at": "2014-01-03T15:18Z"
+							},
+							"links": [
+								{
+									"rel": "by",
+									"href": "http://localhost:8000/users/catherine.json"
+								}
+							]
+						},
+						{
+							"class": ["message"],
+							"properties": {
+								"content": "contest*",
+								"at": "2014-01-03T15:25Z"
+							},
+							"links": [
+								{
+									"rel": "by",
+									"href": "http://localhost:8000/users/catherine.json"
+								}
+							]
+						},
+						{
+							"class": ["message"],
+							"properties": {
+								"content": "*Wait*! When was it?",
+								"at": "2014-01-03T16:04Z"
+							},
+							"links": [
+								{
+									"rel": "by",
+									"href": "http://localhost:8000/users/joe.json"
+								}
+							]
+						},
+						{
+							"class": ["message"],
+							"properties": {
+								"content": "In 5 mins",
+								"at": "2014-01-03T16:30Z"
+							},
+							"links": [
+								{
+									"rel": "by",
+									"href": "http://localhost:8000/users/catherine.json"
+								}
+							]
+						}
+					],
+					"links": [
+						{
+							"rel": "with",
+							"href": "http://localhost:8000/users/catherine.json"
+						}
+					],
+					"actions": [
+						{
+							"name": "send",
+							"title": "Send Message",
+							"method": "GET",
+							"href": "http://localhost:8000/action/tocatherine.json",
+							"fields": [
+								{"name":"message", "type": "text"}
+							]
+						}
+					]
+				}
+
+			]
+		}
+	],
+	"links": [
+		{
+			"rel": "stream_start",
+			"href": "http://localhost:8000/stream/start.json"
+		},
+		{
+			"rel": "contacts",
+			"href": "http://localhost:8000/contacts.json"
+		},
+		{
+			"rel": "chatrooms",
+			"href": "http://localhost:8000/chatrooms.json"
+		}
+	]
 }

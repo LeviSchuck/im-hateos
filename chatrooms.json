@@ -1,0 +1,24 @@
+{
+	"class": ["chatrooms","list"],
+	"parameters": {
+		"currently_in": 0,
+		"total_available": 1
+	},
+	"entities": [
+		{
+			"class": ["chatroom"],
+			"parameters": {
+				"display_name": "The Laundromat",
+				"total_inside": 1
+			},
+			"actions": [
+				{
+					"name": "join",
+					"title": "Join chatroom",
+					"method": "GET",
+					"href": "http://localhost:8000/action/joinlaundry.json"
+				}
+			]
+		}
+	]
+}
