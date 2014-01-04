@@ -8,6 +8,9 @@ that is, there are provided queries to view
 and follow, and there are commands given that
 can be executed.
 
+The format of the JSON will follow something
+similar to what [Siren][] proposes.
+
 Start serving by running
 
     python -m SimpleHTTPServer
@@ -21,3 +24,5 @@ in these documents.
 You are expected delay your application by the
 value in miliseconds before processing it and
 events next in the sequence.
+
+[Siren]: https://github.com/kevinswiber/siren
